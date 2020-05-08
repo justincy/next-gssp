@@ -30,7 +30,12 @@ doing it twice.
 
 ## Error Handling
 
-Sometimes requests fail. How should those be handled? Returning an
-HTTP error code just renders it on the page. That's not what we
-want. We'd prefer for our app's error page to be rendered. How can
-we do that?
+Sometimes requests fail. How should those be handled? Presently, this
+is what occurs if you return an HTTP error code from `getServerSideProps()`:
+
+1. Next sees the HTTP error code and, in response, triggers a full page reload.
+2. The browser requests the page and receives the error code with no HTML
+   so you see the browser's "This page isn't working" message.
+
+That's not obviously what we want. We'd prefer for our app's error page
+to be rendered. How can we do that?
