@@ -3,7 +3,10 @@ import Layout from '../components/Layout';
 export default function RedirectPage() {
   return (
     <Layout>
-      <h1>You shouldn't ever see this</h1>
+      <h1>
+        You should not ever see this because the redirect will prevent this page
+        from rendering.
+      </h1>
     </Layout>
   );
 }
