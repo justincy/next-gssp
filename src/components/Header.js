@@ -9,6 +9,10 @@ export default function Header() {
       |{' '}
       <Link href="/redirect">
         <a>Redirect</a>
+      </Link>{' '}
+      |{' '}
+      <Link href="/error">
+        <a>Error</a>
       </Link>
       <hr />
     </header>
