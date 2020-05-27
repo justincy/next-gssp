@@ -11,12 +11,8 @@ export default function RedirectPage() {
   );
 }
 
-export async function getServerSideProps({ res }) {
-  res.writeHead(302, {
-    Location: '/',
-  });
-  res.end();
+export async function getServerSideProps() {
   // You get console errors about "TypeError: Cannot convert undefined or null to object"
   // if you don't return an empty props object here.
-  return { props: {} };
+  return { props: {}, redirect: '/redirected' };
 }
