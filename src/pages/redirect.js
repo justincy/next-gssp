@@ -12,7 +12,6 @@ export default function RedirectPage() {
 }
 
 export async function getServerSideProps({ res }) {
-  res.setHeader('Access-Control-Expose-Headers', 'Location');
   res.writeHead(302, {
     Location: '/',
   });
